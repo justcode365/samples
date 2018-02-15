@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <label for="icons">Icons:</label>
+    <select id="icons">
+      <option value="static/icons/ic_create_new_folder_black_48dp.png">New Folder</option>
+    </select>
+    <button id="show">Show Icon</button>
+    <div id="container"></div>
+    <script type="text/javascript">
+      
+        document.querySelector('#show').addEventListener('click', () => {
+          const iconUrl = document.querySelector('select').selectedOptions[0].value;
+          let imgElement = document.createElement('img');
+          imgElement.src = iconUrl;
+          document.querySelector('#container').appendChild(imgElement);
+        });
+    </script>
+  </body>
+</html>
